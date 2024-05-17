@@ -127,11 +127,6 @@ body {
   cursor: pointer;
 }
 
-.project-vid-res {
-  border-radius: 30px;
-  border: 7px solid rgb(255, 214, 204);
-}
-
 .project {
   width: calc(33% - 1rem);
   text-align: center;
