@@ -1,0 +1,283 @@
+.kanit-extrabold {
+  font-family: "Kanit", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.banner {
+  width: 60px;
+  background-color: rgb(204, 232, 255);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: space-between;
+  position: fixed;
+  height: 100vh;
+  font-weight: 600;
+  z-index: 2;
+  justify-content: center;
+}
+
+.home a, .contact a, .work a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 9rem;
+  margin-top: 10rem;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  font-size: 3rem;
+  color: rgb(52, 61, 65);
+  letter-spacing: 0.3rem;
+  margin-bottom: 15rem;
+  text-decoration: none;
+  margin-left: -0.3rem;
+}
+
+.home a:hover, .contact a:hover, .work a:hover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 9rem;
+  margin-top: 10rem;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  font-size: 3rem;
+  color: rgb(138, 157, 167);
+  letter-spacing: 0.3rem;
+  margin-bottom: 15rem;
+  text-decoration: none;
+}
+
+.main-content {
+  position: relative;
+  text-align: center;
+  flex: 1;
+  padding: 15.5rem;
+  color: rgb(52, 61, 65);
+  margin-bottom: -5rem;
+}
+
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.greeting {
+  font-size: 8rem;
+  padding-top: 1rem;
+  margin-bottom: -1.3rem;
+  padding-left: 7rem;
+  font-weight: 800;
+  cursor: default;
+  z-index: 2;
+  position: relative;
+}
+
+.intro {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-top: -0rem;
+  padding-bottom: 14rem;
+  padding-left: 7rem;
+  z-index: 2;
+  position: relative;
+}
+
+.portfolio {
+  padding-left: 7rem;
+  font-size: 2rem;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.project-vid {
+  border-radius: 30px;
+  border: 7px solid rgb(255, 214, 204);
+}
+
+.project-vid:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.project-vid-res {
+  border-radius: 30px;
+  border: 7px solid rgb(255, 214, 204);
+}
+
+.project {
+  width: calc(33% - 1rem);
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-right: 1.3rem;
+}
+
+.project-image {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+  border-radius: 50px;
+  border: 10px solid rgb(255, 214, 204);
+}
+
+.project-image:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.greeting-letter {
+  display: inline-block;
+  margin: -5px;
+  transition: color 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  color: rgb(52, 61, 65);
+}
+
+.greeting-letter-end {
+  font-family: "Danfo", serif;
+  font-weight: 400;
+  display: inline-block;
+  transition: color 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  font-size: 9rem;
+  color: rgb(52, 61, 65);
+}
+
+.greeting-letter-end:hover {
+  color: rgb(255, 218, 204);
+  transform: translateY(-10px);
+}
+
+.greeting-letter:hover {
+  color: rgb(255, 218, 204);
+  transform: translateY(-10px);
+}
+
+.banner-item {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.banner-item:hover {
+  background-color: #f0f0f0;
+}
+
+#contact {
+  background-color: #accee6;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 50rem;
+  padding-left: 3rem;
+}
+
+.about-me-header {
+  font-family: "Kanit", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 5rem;
+  margin-top: -5rem;
+}
+
+.about-me {
+  font-family: "Kanit", sans-serif;
+  width: 50%;
+  padding-left: 27.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: aliceblue;
+  letter-spacing: 0.1rem;
+}
+
+.contact-me {
+  font-family: "Kanit", sans-serif;
+  width: 70%;
+  padding-left: 17rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: aliceblue;
+}
+
+.contact-me-header {
+  font-family: "Kanit", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 5rem;
+  text-align: center;
+  margin-top: -3rem;
+}
+
+#contact-form {
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  margin: 20px;
+  text-align: center;
+}
+
+#contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  padding: 5px;
+  border: 1px solid #ccc;
+  width: 50%;
+}
+
+#message {
+  height: 10rem;
+  margin-top: 0.5rem;
+}
+
+#contact-form button {
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  background-color: #4c6baf;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
