@@ -108,6 +108,7 @@ body {
 .portfolio {
   padding-left: 7rem;
   font-size: 2rem;
+  transform-style: preserve-3d;
 }
 
 .gallery {
@@ -219,6 +220,7 @@ body {
   font-weight: 700;
   color: aliceblue;
   letter-spacing: 0.1rem;
+  text-align: start;
 }
 
 .contact-me {
@@ -275,4 +277,1111 @@ body {
   padding: 10px 20px;
   border: none;
   cursor: pointer;
+}
+
+.arrow {
+  position: absolute;
+  top: 62%;
+  left: 52.5%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.arrow span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 10px solid rgb(52, 61, 65);
+  border-right: 10px solid rgb(52, 61, 65);
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: scroll 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -.4s;
+}
+
+@keyframes scroll {
+  0%{
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px,-20px);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform: rotate(45deg) translate(20px,20px);
+  }
+}
+
+@media screen and (max-height: 900px) {
+  .banner {
+    width: 20px;
+    justify-content: center;
+    margin-top: -1rem;
+  }
+
+  .home a, .contact a, .work a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 9rem;
+    margin-top: 10rem;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    font-size: 2rem;
+    color: rgb(52, 61, 65);
+    letter-spacing: 0.3rem;
+    margin-bottom: 12rem;
+    text-decoration: none;
+    margin-left: -0.3rem;
+  }
+
+  .home a:hover, .contact a:hover, .work a:hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 9rem;
+    margin-top: 10rem;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    font-size: 2rem;
+    color: rgb(138, 157, 167);
+    letter-spacing: 0.3rem;
+    margin-bottom: 12rem;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-height: 610px) {
+  .banner {
+    width: 20px;
+    justify-content: center;
+    margin-top: -1rem;
+  }
+
+  .home a, .contact a, .work a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 9rem;
+    margin-top: 8rem;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    font-size: 2rem;
+    color: rgb(52, 61, 65);
+    letter-spacing: 0.3rem;
+    margin-bottom: 10rem;
+    text-decoration: none;
+    margin-left: -0.3rem;
+  }
+
+  .home a:hover, .contact a:hover, .work a:hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 9rem;
+    margin-top: 8rem;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    font-size: 2rem;
+    color: rgb(138, 157, 167);
+    letter-spacing: 0.3rem;
+    margin-bottom: 10rem;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 2100px) {
+  .about-me {
+    padding-left: 30rem;
+  }
+
+  #contact-form {
+    padding-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  .about-me {
+    padding-left: 28rem;
+  }
+
+  .about-me-header {
+    padding-top: 8rem;
+  }
+
+  .contact-me-header {
+    padding-top: 8rem;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .project {
+    width: calc(33% - 1rem);
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-right: 25px;
+  }
+
+  #contact {
+    background-color: #accee6;
+    margin-top: 10rem;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 50rem;
+    margin-left: 0rem;
+    padding-top: 3rem;
+  }
+
+  .about-me-header {
+    padding-left: 5rem;
+  }
+
+  .contact-me-header {
+    padding-top: 5rem;
+    padding-left: 5rem;
+  }
+
+  #contact-form {
+    padding-left: 4rem;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 700px);
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-left: 8.5rem;
+  }
+}
+
+@media screen and (max-width: 1710px) {
+  .about-me-header {
+    padding-left: 7rem;
+  }
+
+  .contact-me-header {
+    padding-left: 8rem;
+  }
+}
+
+@media screen and (max-width: 1625px) {
+  #contact {
+    background-color: #accee6;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 50rem;
+    margin-left: -10rem;
+    padding-top: 2rem;
+  }
+
+  .about-me-header {
+    padding-left: 17rem;
+  }
+
+  .about-me {
+    padding-left: 34rem;
+  }
+  
+  .contact-me-header {
+    padding-left: 8rem;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .about-me {
+    padding-left: 32rem;
+  }
+
+  .contact-me-header {
+    padding-left: 9rem;
+  }
+
+  .about-me-header {
+    padding-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .project {
+    width: calc(33% - 1rem);
+    text-align: center;
+    margin-bottom: -10rem;
+    margin-left: 6.5rem;
+    scale: 70%;
+    display: flex;
+  }
+
+  .contact-me-header {
+    padding-left: 10rem;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 700px);
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: -2rem;
+    padding-right: 5rem;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .about-me {
+    padding-left: 31rem;
+  }
+
+  #contact-form {
+    margin-left: -6rem;
+  }
+
+  .contact-me-header {
+    padding-left: 6rem;
+  }
+
+  .about-me-header {
+    padding-top: 5rem;
+  }
+
+  .about-me {
+    padding-left: 31rem;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .contact-me-header {
+    padding-top: 15rem;
+  }
+
+  .about-me {
+    padding-left: 29rem;
+  }
+
+  .about-me-header {
+    padding-top: 14rem;
+    padding-left: 15rem;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .about-me {
+    padding-left: 28rem;
+  }
+
+  #contact-form {
+    margin-left: -8rem;
+  }
+
+  .contact-me-header {
+    padding-left: 6rem;
+    padding-top: 10rem;
+  }
+
+  .about-me-header {
+    padding-top: 10rem;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 700px);
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: -2rem;
+    padding-right: 7rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .project {
+    width: calc(33% - 1rem);
+    text-align: center;
+    padding-bottom: 30rem;
+    scale: 90%;
+  }
+
+  .project-image {
+    scale: 150%;
+  }
+
+  .project-vid {
+    scale: 150%;
+  }
+
+  #contact {
+    margin-top: -10rem;
+  }
+
+  .contact-me-header {
+    padding-top: 10rem;
+    padding-left: 2rem;
+  }
+
+  .about-me {
+    padding-left: 25rem;
+  }
+
+  .about-me-header {
+    padding-left: 12rem;
+  }
+
+  #contact-form {
+    padding-left: 0rem;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 700px);
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 45rem;
+    scale: 100%;
+    padding-right: 12rem;
+  }
+
+  .main-content {
+    position: relative;
+    text-align: center;
+    flex: 1;
+    padding: 0rem;
+    color: rgb(52, 61, 65);
+    margin-bottom: -5rem;
+    margin-top: -6.7rem;
+  }
+
+  #background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .greeting {
+    font-size: 8rem;
+    padding-top: 20rem;
+    margin-bottom: -1.3rem;
+    padding-left: 7rem;
+    font-weight: 800;
+    cursor: default;
+    z-index: 2;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .about-me-header {
+    padding-top: 15rem;
+  }
+
+  .contact-me-header {
+    padding-top: 15rem;
+    padding-left: 4rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #contact {
+    margin-top: 450rem;
+    margin-top: -9rem;
+  }
+
+  .contact-me-header {
+    padding-top: 27rem;
+    padding-left: 6rem;
+  }
+
+  .about-me {
+    padding-left: 25rem;
+  }
+
+  .about-me-header {
+    padding-left: 16rem;
+    padding-top: 25rem;
+  }
+
+  #contact-form {
+    padding-left: 0rem;
+  }
+
+  .gallery {
+    padding-top: 10rem;
+  }
+
+  .arrow {
+    left: 56%;
+    top: 80%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .project {
+    width: calc(33% - 1rem);
+    text-align: center;
+    margin-right: 25px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 700px);
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 35rem;
+    scale: 100%;
+  }
+
+  .main-content {
+    position: relative;
+    text-align: center;
+    flex: 1;
+    padding: 0rem;
+    color: rgb(52, 61, 65);
+    margin-bottom: -5rem;
+    margin-top: -6.7rem;
+  }
+
+  #background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .about-me-header {
+    padding-top: 27rem;
+  }
+  .about-me {
+    padding-left: 24.5rem;
+  }
+
+  .contact-me-header {
+    padding-top: 28rem;
+  }
+
+  .greeting {
+    font-size: 8rem;
+    padding-top: 20rem;
+    margin-bottom: -1.3rem;
+    padding-left: 7rem;
+    font-weight: 800;
+    cursor: default;
+    z-index: 2;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .contact-me-header {
+    padding-left: 8rem;
+    padding-top: 34rem;
+  }
+
+  .about-me {
+    padding-left: 23rem;
+  }
+
+  .gallery {
+    padding-top: 15rem;
+  }
+
+  .about-me-header {
+    padding-top: 33rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .project-image {
+    scale: 100%;
+  }
+
+  .project-vid {
+    scale: 100%;
+  }
+
+  .project {
+    padding-bottom: 10rem;
+  }
+
+  #contact {
+    margin-top: 2rem;
+  }
+
+  .about-me {
+    padding-left: 23rem;
+  }
+
+  .contact-me-header {
+    padding-top: 30rem;
+  }
+
+  #contact-form {
+    width: 70vw;
+    padding-left: 3.5rem;
+  }
+
+  .contact-me {
+    width: 10vw;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .contact-me-header {
+    padding-left: 10rem;
+    padding-top: 42rem;
+  }
+
+  .about-me {
+    padding-left: 23rem;
+  }
+
+  .about-me-header {
+    padding-top: 40rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .contact-me-header {
+    padding-left: 10rem;
+    padding-top: 42rem;
+  }
+
+  .about-me-header {
+    padding-top: 42rem;
+  }
+
+  .about-me {
+    padding-left: 22.5rem;
+  }
+
+  .arrow {
+    left: 56%;
+    top: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .about-me {
+    padding-left: 22rem;
+  }
+
+  .about-me-header {
+    padding-top: 43rem;
+  }
+
+  .contact-me-header {
+    padding-top: 43rem;
+  }
+
+  .arrow {
+    left: 56%;
+    top: 80%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .about-me-header {
+    padding-top: 45rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .greeting {
+    font-size: 3.7rem;
+    padding-top: 27rem;
+    margin-bottom: -1.3rem;
+    padding-left: 7rem;
+    font-weight: 800;
+    cursor: default;
+    z-index: 2;
+    position: relative;
+  }
+
+  #contact {
+    margin-top: -24rem;
+  }
+
+  .about-me-header {
+    padding-top: 50rem;
+  }
+
+  .about-me {
+    padding-left: 20rem;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 700px);
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -7.2rem;
+    scale: 95%;
+    margin-left: -6.2rem;
+    padding-left: 15rem;
+  }
+
+  .greeting-letter-end {
+    font-family: "Danfo", serif;
+    font-weight: 400;
+    display: inline-block;
+    transition: color 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    font-size: 4.3rem;
+    color: rgb(52, 61, 65);
+  }
+
+  #background-video {
+    position: absolute;
+    width: 100%;
+    height: 110vh;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .intro {
+    font-size: 0.85rem;
+    font-weight: 800;
+    margin-top: 0.4rem;
+    padding-bottom: 14rem;
+    padding-left: 7rem;
+    z-index: 2;
+    position: relative;
+  }
+
+  .contact-me-header {
+    padding-top: 50rem;
+    padding-left: 7rem;
+  }
+
+  #contact-form {
+    width: 50vw;
+    padding-left: 5rem;
+  }
+
+  #contact-form input,
+#contact-form textarea {
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  padding: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+}
+
+@media screen and (max-width: 650px) {
+  .about-me-header {
+    padding-top: 60rem;
+    padding-left: 15rem;
+  }
+
+  .about-me {
+    padding-left: 19rem;
+  }
+
+  .contact-me-header {
+    padding-top: 60rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact-me-header {
+    padding-top: 65rem;
+  }
+
+  #contact {
+    margin-top: -15rem;
+  }
+
+  .project {
+    scale: 60%;
+    padding-left: 4.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .about-me {
+    padding-left: 18rem;
+  }
+
+  #contact-form {
+    padding-left: 4rem;
+  }
+
+  .about-me-header {
+    padding-top: 65rem;
+    padding-left: 14rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .contact-me-header {
+    padding-top: 75rem;
+  }
+
+  #contact-form {
+    padding-left: 2.8rem;
+  }
+
+  .about-me {
+    padding-left: 16.5rem;
+  }
+
+  .about-me-header {
+    padding-top: 73rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .contact-me-header {
+    padding-top: 80rem;
+    padding-left: 4rem;
+  }
+
+  #contact-form {
+    padding-left: 1rem;
+  }
+
+  .gallery {
+    margin-top: -35rem;
+    margin-left: -8rem;
+  }
+
+  .about-me {
+    padding-left: 16rem;
+  }
+
+  .about-me-header {
+    padding-top: 80rem;
+    padding-left: 11rem;
+  }
+
+  .greeting {
+    padding-left: 5rem;
+  }
+
+  .intro {
+    padding-left: 4rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contact-me-header {
+    padding-top: 85rem;
+    font-size: 3rem;
+  }
+
+  #contact-form {
+    padding-left: 2rem;
+  }
+
+  .about-me {
+    padding-left: 16.5rem;
+  }
+
+  .about-me-header {
+    padding-top: 85rem;
+  }
+
+  .project {
+    padding-left: 3.7rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .contact-me-header {
+    padding-top: 90rem;
+    font-size: 3rem;
+  }
+
+  #contact-form {
+    padding-left: 2rem;
+  }
+
+  .about-me {
+    padding-left: 16.5rem;
+  }
+
+  .project {
+    padding-left: 2.5rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .contact-me-header {
+    padding-top: 67rem;
+    font-size: 3rem;
+    padding-left: 4rem;
+  }
+
+  #contact {
+    margin-top: -120rem;
+  }
+
+  .greeting {
+    margin-left: -2.5rem;
+  }
+
+  .intro {
+    margin-left: -3rem;
+  }
+
+  #contact-form {
+    margin-left: -10.8rem;
+  }
+
+  .about-me {
+    padding-left: 12.7rem;
+    font-size: 1.25rem;
+    width: 70vw;
+  }
+
+  .about-me-header {
+    padding-top: 66rem;
+    font-size: 4rem;
+    padding-left: 11.5rem;
+  }
+
+  .project {
+    padding-bottom: 0.1rem;
+    scale: 70%;
+  }
+
+  .gallery {
+    scale: 70%;
+    margin-left: -8rem;
+    margin-top: -120rem;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    padding: 5px;
+    border: 1px solid #ccc;
+    width: 130%;
+    margin-left: -2.3rem;
+}
+
+.banner {
+  width: 20px;
+  justify-content: center;
+  margin-top: -1rem;
+}
+
+.home a, .contact a, .work a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 9rem;
+  margin-top: 10rem;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  font-size: 2rem;
+  color: rgb(52, 61, 65);
+  letter-spacing: 0.3rem;
+  margin-bottom: 12rem;
+  text-decoration: none;
+  margin-left: -0.3rem;
+}
+
+.home a:hover, .contact a:hover, .work a:hover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 9rem;
+  margin-top: 10rem;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  font-size: 2rem;
+  color: rgb(138, 157, 167);
+  letter-spacing: 0.3rem;
+  margin-bottom: 12rem;
+  text-decoration: none;
+}
+
+.arrow {
+  left: 56%;
+  top: 80%;
+}
+
+.intro {
+  padding-left: 6.5rem;
+}
+
+.greeting {
+  padding-left: 7rem;
+}
+}
+
+@media screen and (max-width: 420px) {
+  .gallery {
+    margin-top: -125rem;
+  }
+
+  .intro {
+    padding-left: 6.5rem;
+  }
+
+  .greeting {
+    padding-left: 7rem;
+  }
+
+  .arrow {
+    left: 56%;
+    top: 80%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .gallery {
+    margin-top: -130rem;
+    margin-left: -9rem;
+  }
+
+  .about-me-header {
+    padding-top: 68rem;
+  }
+
+  .contact-me-header {
+    padding-top: 69rem;
+  }
+
+  .arrow {
+    left: 56%;
+    top: 80%;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .gallery {
+    margin-top: -125rem;
+    margin-left: -9.5rem;
+  }
+
+  .about-me-header {
+    padding-top: 70rem;
+  }
+
+  .contact-me-header {
+    padding-top: 71rem;
+  }
+
+  #contact-form {
+    margin-left: -11.5rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #contact {
+    margin-top: -120rem;
+    padding-top: 10rem;
+  }
+
+  .contact-me-header {
+    padding-top: 64rem;
+    padding-left: 3.5rem;
+    font-size: 3rem;
+  }
+
+  .about-me {
+    padding-left: 12.5rem;
+  }
+
+  .about-me-header {
+    padding-left: 11rem;
+    font-size: 3rem;
+    padding-top: 53rem;
+  }
+
+  #contact-form {
+    width: 170%;
+    padding-left: 4.5rem;
+  }
+
+  .greeting {
+    font-size: 4rem;
+    padding-top: 15rem;
+    margin-bottom: -1.3rem;
+    padding-left: 6.5rem;
+    font-weight: 800;
+    cursor: default;
+    z-index: 2;
+    position: relative;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    padding: 5px;
+    border: 1px solid #ccc;
+    width: 300%;
+    margin-left: -3.5rem;
+}
+
+  .banner {
+    width: 20px;
+    background-color: rgb(204, 232, 255);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: space-between;
+    position: fixed;
+    height: 100vh;
+    font-weight: 600;
+    z-index: 2;
+    justify-content: center;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 700px);
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -118rem;
+    scale: 70%;
+    margin-left: -10rem;
+  }
+
+  .greeting-letter-end {
+    font-family: "Danfo", serif;
+    font-weight: 400;
+    display: inline-block;
+    transition: color 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    font-size: 5rem;
+    color: rgb(52, 61, 65);
+  }
+
+  .intro {
+    font-size: 0.9rem;
+    font-weight: 800;
+    margin-top: 0.4rem;
+    padding-bottom: 14rem;
+    padding-left: 7rem;
+    z-index: 2;
+    position: relative;
+  }
 }
