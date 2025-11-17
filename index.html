@@ -3,15 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="Willem West - Animation & Graphic Design Portfolio featuring 3D animations, character design, and web development.">
+  <meta name="theme-color" content="#accee6">
   <title>Willem West | Animation & Graphic Design Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js"></script>
+  
+  <!-- Preconnect to external domains -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Danfo&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+  
+  <!-- DNS prefetch for Netlify forms -->
+  <link rel="dns-prefetch" href="https://api.netlify.com">
+  
+  <!-- Load only essential fonts with display=swap -->
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,700;0,800;1,700&family=Danfo:wght@400&display=swap" rel="stylesheet">
+  
+  <!-- Critical CSS inline for faster first paint -->
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: "Kanit", sans-serif; margin: 0; padding: 0; }
+    .banner { width: 60px; background-color: rgb(204, 232, 255); position: fixed; height: 100vh; z-index: 2; }
+    .page-container { display: flex; flex-direction: column; height: auto; }
+  </style>
+  
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
 </head>
 <body>
   <div class="page-container">
@@ -49,7 +65,7 @@
           </div>
         </a>
 
-        <video id="background-video" autoplay muted loop>
+        <video id="background-video" autoplay muted loop playsinline poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%23cce8ff' width='1920' height='1080'/%3E%3C/svg%3E">
           <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716083382/mainBG_a77k4a.mp4" type="video/mp4">
         </video>
       </div>
@@ -62,7 +78,7 @@
 
           <div class="project">
             <a href="gum.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078792/portfolio-assets/sin7gum_u7785n.mp4" type="video/mp4">
               </video>
             </a>
@@ -70,7 +86,7 @@
 
           <div class="project">
             <a href="stereo.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078833/portfolio-assets/sin7stereo-t_lzgijo.mp4" type="video/mp4">
               </video>
             </a>
@@ -78,7 +94,7 @@
 
           <div class="project">
             <a href="whack.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078815/portfolio-assets/sin7whack_ojak7i.mp4" type="video/mp4">
               </video>
             </a>
@@ -86,7 +102,7 @@
 
           <div class="project">
             <a href="gcc.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1763362249/gcc-t_qhmur0.mp4" type="video/mp4">
               </video>
             </a>
@@ -94,7 +110,7 @@
 
           <div class="project">
             <a href="smile.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078747/portfolio-assets/smile_fzedev.mp4" type="video/mp4">
               </video>
             </a>
@@ -102,7 +118,7 @@
 
           <div class="project">
             <a href="easter.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078700/portfolio-assets/easter_t9ggz8.mp4" type="video/mp4">
               </video>
             </a>
@@ -110,7 +126,7 @@
 
           <div class="project">
             <a href="overworld.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078724/portfolio-assets/overworld_iicptt.mp4" type="video/mp4">
               </video>
             </a>
@@ -118,207 +134,213 @@
 
           <div class="project">
             <a href="short.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078860/portfolio-assets/short-t_nwruzb.mp4" type="video/mp4">
               </video>
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+            <a href="shortIntro.html">
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078841/portfolio-assets/shortIntro-t_qmcatx.mp4" type="video/mp4">
               </video>
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+            <a href="gravelane.html">
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078690/portfolio-assets/gravelane_jc4vjp.mp4" type="video/mp4">
               </video>
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+            <a href="heartstring.html">
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078773/portfolio-assets/heartstrings-t_dh66ds.mp4" type="video/mp4">
               </video>
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+            <a href="totalKO.html">
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078773/portfolio-assets/totalKO-t_jzcvor.mp4" type="video/mp4">
               </video>
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+            <a href="crest.html">
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078798/portfolio-assets/crest-t_q4mq2r.mp4" type="video/mp4">
               </video>
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+            <a href="friends.html">
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078777/portfolio-assets/friends-t_cviwyu.mp4" type="video/mp4">
               </video>
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+            <a href="allEye.html">
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078679/portfolio-assets/allEye_wzrknw.mp4" type="video/mp4">
               </video>
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+            <a href="hands.html">
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078688/portfolio-assets/handsBG-t_penz0g.mp4" type="video/mp4">
               </video>
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+            <a href="frog.html">
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078790/portfolio-assets/icyFrog-t_whtt5z.mp4" type="video/mp4">
               </video>
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+            <a href="chimney.html">
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078743/portfolio-assets/smoker_vx3vgx.mp4" type="video/mp4">
               </video>
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+            <a href="alligator.html">
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078675/portfolio-assets/animA_xp2f7p.mp4" type="video/mp4">
               </video>
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+            <a href="butterfly.html">
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078676/portfolio-assets/animB_e1n2wj.mp4" type="video/mp4">
               </video>
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+            <a href="chameleon.html">
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078674/portfolio-assets/animC_ot22nv.mp4" type="video/mp4">
               </video>
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+            <a href="dolphin.html">
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078675/portfolio-assets/animD_v5wgov.mp4" type="video/mp4">
               </video>
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+            <a href="elephant.html">
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078676/portfolio-assets/animE_zt6yad.mp4" type="video/mp4">
               </video>
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+            <a href="flamingo.html">
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078676/portfolio-assets/animF_z1wnul.mp4" type="video/mp4">
               </video>
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+            <a href="giraffe.html">
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078677/portfolio-assets/animG_l17thb.mp4" type="video/mp4">
               </video>
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <video width="550" height="550" class="project-vid" muted autoplay loop>
+            <a href="faceAnim.html">
+              <video width="550" height="550" class="project-vid" muted autoplay loop loading="lazy" playsinline>
                 <source src="https://res.cloudinary.com/west-portfolio/video/upload/v1716078703/portfolio-assets/jamoWijiAnim_jhe66t.mp4" type="video/mp4">
               </video>
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <img width="550" height="550" class="project-image" src="https://res.cloudinary.com/west-portfolio/image/upload/v1716081074/portfolio-assets/JamesWiji-U-1_sysdoq.png" alt="Project 2">
+            <a href="posedCharacter.html">
+              <img width="550" height="550" class="project-image" loading="lazy" decoding="async" src="https://res.cloudinary.com/west-portfolio/image/upload/v1716081074/portfolio-assets/JamesWiji-U-1_sysdoq.png" alt="Project 2">
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <img width="550" height="550" class="project-image" src="https://res.cloudinary.com/west-portfolio/image/upload/v1716078677/portfolio-assets/catInPot-t_spudco.png" alt="Project 1">
+            <a href="catInPot.html">
+              <img width="550" height="550" class="project-image" loading="lazy" decoding="async" src="https://res.cloudinary.com/west-portfolio/image/upload/v1716078677/portfolio-assets/catInPot-t_spudco.png" alt="Project 1">
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <img width="550" height="550" class="project-image" src="https://res.cloudinary.com/west-portfolio/image/upload/v1716078759/portfolio-assets/Wickedy_umruca.png" alt="Project 2">
+            <a href="wickedy.html">
+              <img width="550" height="550" class="project-image" loading="lazy" decoding="async" src="https://res.cloudinary.com/west-portfolio/image/upload/v1716078759/portfolio-assets/Wickedy_umruca.png" alt="Project 2">
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <img width="550" height="550" class="project-image" src="https://res.cloudinary.com/west-portfolio/image/upload/v1716078708/portfolio-assets/navalMine-t_ulvoe3.png" alt="Project 2">
+            <a href="navalMines.html">
+              <img width="550" height="550" class="project-image" loading="lazy" decoding="async" src="https://res.cloudinary.com/west-portfolio/image/upload/v1716078708/portfolio-assets/navalMine-t_ulvoe3.png" alt="Project 2">
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <img width="550" height="550" class="project-image" src="https://res.cloudinary.com/west-portfolio/image/upload/v1716078751/portfolio-assets/unwanted-t_ljcp7o.png" alt="Project 2">
+            <a href="unwantedFriend.html">
+              <img width="550" height="550" class="project-image" loading="lazy" decoding="async" src="https://res.cloudinary.com/west-portfolio/image/upload/v1716078751/portfolio-assets/unwanted-t_ljcp7o.png" alt="Project 2">
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <img width="550" height="550" class="project-image" src="https://res.cloudinary.com/west-portfolio/image/upload/v1716078679/portfolio-assets/crashed-t_a2ujev.png" alt="Project 2">
+            <a href="programCrashed.html">
+              <img width="550" height="550" class="project-image" loading="lazy" decoding="async" src="https://res.cloudinary.com/west-portfolio/image/upload/v1716078679/portfolio-assets/crashed-t_a2ujev.png" alt="Project 2">
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <img width="550" height="550" class="project-image" src="https://res.cloudinary.com/west-portfolio/image/upload/v1716078754/portfolio-assets/wagmi-t_dfogpd.png" alt="Project 2">
+            <a href="witchsBasement.html">
+              <img width="550" height="550" class="project-image" loading="lazy" decoding="async" src="https://res.cloudinary.com/west-portfolio/image/upload/v1716086678/witch_s_basement_dbseyt.png" alt="Project 2">
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <img width="550" height="550" class="project-image" src="https://res.cloudinary.com/west-portfolio/image/upload/v1716086678/witch_s_basement_dbseyt.png" alt="Project 2">
+            <a href="whispyWoods.html">
+              <img width="550" height="550" class="project-image" loading="lazy" decoding="async" src="https://res.cloudinary.com/west-portfolio/image/upload/v1763378061/WhispyWoods_cdddew.png" alt="Project 2">
+            </a>
+          </div>
+          
+          <div class="project">
+            <a href="hazardous.html">
+              <img width="550" height="550" class="project-image" loading="lazy" decoding="async" src="https://res.cloudinary.com/west-portfolio/image/upload/v1763361562/Hazardous_rbzcot_b_rgb_1D1D1D_e4h9vk.png" alt="Project 2">
             </a>
           </div>
 
           <div class="project">
-            <a href="project1.html">
-              <img width="550" height="550" class="project-image" src="https://res.cloudinary.com/west-portfolio/image/upload/v1763361792/boinky-ketchup_hpqwbc.png" alt="Project 2">
+            <a href="catKetchup.html">
+              <img width="550" height="550" class="project-image" loading="lazy" decoding="async" src="https://res.cloudinary.com/west-portfolio/image/upload/v1763361792/boinky-ketchup_hpqwbc.png" alt="Project 2">
             </a>
           </div>
 
@@ -336,27 +358,43 @@
         multiple clients to create animations and concept designs for brand and client promotion. Additionally, I have 
         experience with designing and creating multiple websites for both personal and client purposes. <br> <br> I am extremely 
         passionate about creating awareness through design and really love bringing characters and emotion to life 
-        through my work. I always enjoy learning new techniques to implement into my next project. Should you have any 
-        interest in my work, would like to collaborate, or just want to say hello, feel free to contact me!</div>
+        through my work. I always enjoy learning new techniques!</div>
       </div>
 
-      <div class="contact-me-header">CONTACT</div>
-
       <div class="contact-me">
-        <form id="contact-form" netlify>
-          <input type="text" id="name" name="name" required placeholder="NAME *">
-          <br>
-        
-          <input type="email" id="email" name="email" required placeholder="EMAIL *">
-          <br>
-        
-          <input type="text" id="subject" name="subject" placeholder="SUBJECT">
-          <br>
-        
-          <textarea id="message" name="message" required placeholder="MESSAGE *"></textarea>
-          <br>
-        
-          <button type="submit">SEND</button>
+        <form id="contact-form" netlify class="creative-form">
+          <div class="contact-card">
+            <div class="card-header">
+              <h3>Get in touch</h3>
+              <p>Have a project, a question, or want to collaborate? Send a message and I’ll respond soon.</p>
+            </div>
+
+            <div class="contact-fields">
+              <div class="form-row">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required aria-label="Name">
+              </div>
+
+              <div class="form-row">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required aria-label="Email">
+              </div>
+
+              <div class="form-row" style="grid-column: 1 / -1;">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" aria-label="Subject">
+              </div>
+
+              <div class="form-row" style="grid-column: 1 / -1;">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" required aria-label="Message"></textarea>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="submit-btn" type="submit">Send Message</button>
+            </div>
+          </div>
         </form>
       </div>
 
@@ -365,6 +403,64 @@
   </section>
 
   </div>
+  <!-- Animated footer inserted below contact -->
+  <footer class="animated-footer" aria-label="Site footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <h4>Let's make something</h4>
+        <p>Available for freelance and collaboration — say hi.</p>
+      </div>
+
+      <div class="footer-actions">
+        <!-- Animated duck placeholder: moves left-right across the footer -->
+        <div class="duck-wrap" aria-hidden="false">
+          <div class="duck" role="img" aria-label="Cat">🐈‍⬛</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="waves-wrapper">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,30 C150,80 350,0 600,30 C850,60 1050,10 1200,30 L1200,120 L0,120 Z" fill="rgba(122,92,255,0.14)"></path>
+        <path d="M0,50 C150,10 350,80 600,50 C850,20 1050,80 1200,50 L1200,120 L0,120 Z" fill="rgba(255,138,0,0.08)"></path>
+      </svg>
+    </div>
+
+    <div class="footer-orb" aria-hidden="true"></div>
+    <div class="footer-credit">© <span id="year"></span> Willem West — Animation & Design</div>
+  </footer>
+  <script>
+    // update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
   <script defer src="script.js"></script>
+  <!-- Optimized interactivity script with better performance -->
+  <script>
+    // Optimize mouse tracking with throttling
+    let tgX = 0, tgY = 0;
+    let rafId = null;
+    
+    function move(interBubble) {
+      if (!interBubble) return;
+      const curX = interBubble._curX || 0;
+      const curY = interBubble._curY || 0;
+      interBubble._curX = curX + (tgX - curX) / 20;
+      interBubble._curY = curY + (tgY - curY) / 20;
+      interBubble.style.transform = `translate(${Math.round(interBubble._curX)}px, ${Math.round(interBubble._curY)}px)`;
+      rafId = requestAnimationFrame(() => move(interBubble));
+    }
+    
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        const interBubble = document.querySelector('.interactive');
+        if (interBubble) {
+          interBubble._curX = 0;
+          interBubble._curY = 0;
+          window.addEventListener('mousemove', (e) => { tgX = e.clientX; tgY = e.clientY; }, { passive: true });
+          move(interBubble);
+        }
+      });
+    }
+  </script>
 </body>
 </html>

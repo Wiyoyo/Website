@@ -4,6 +4,10 @@
     font-style: normal;
   }
   
+:root {
+  --banner-width: 60px;
+}
+  
 html {
     scroll-behavior: smooth;
   }
@@ -15,18 +19,26 @@ body {
     background-color: rgb(255, 243, 231);
   }
 
+.page-container {
+  box-sizing: border-box;
+  padding-left: var(--banner-width);
+}
+
 .banner {
-    width: 60px;
-    background-color: rgb(204, 232, 255);
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    justify-content: space-between;
-    position: fixed;
-    height: 100vh;
-    font-weight: 600;
-    z-index: 2;
-    justify-content: center;
+  width: 4.5%;
+  box-sizing: border-box;
+  background-color: rgb(204, 232, 255);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  font-weight: 600;
+  z-index: 999;
+  justify-content: center;
   }
 
   .home a, .contact a, .work a{
@@ -61,45 +73,47 @@ body {
   }
   
   .piece-details {
+    /* center content horizontally and vertically, with space for left banner */
     display: flex;
-    margin-bottom: 40px;
-  }
-  
-  .piece {
-    scale: 100%;
-    position: absolute;
-    left: 10%;
-    top: 12%;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    position: relative;
     z-index: 1;
-    border: 8px solid rgb(51, 48, 61);
+    /* leave space so the fixed left banner doesn't overlap content */
+    margin-left: 60px;
+  }
+
+  .piece {
+    /* fluid video sizing that caps at a reasonable maximum */
+    width: min(60vw, 750px);
+    max-width: 100%;
+    height: auto;
+    border: 8px solid rgb(24, 14, 41);
     border-radius: 20px;
+    box-sizing: border-box;
+    display: block;
   }
 
   .piece1 {
-    scale: 80%;
-    left: 50%;
-    position: absolute;
-    padding-left: 2rem;
-    top: -3%;
-    z-index: 1;
+    display: none;
   }
-  
+
   .title {
     color: rgb(52, 61, 65);
-    position: absolute;
-    top: 28%;
-    left: 52%;
     font-size: 5rem;
-    z-index: 1;
+    margin: 0 0 0 0;
   }
-  
+
   .piece-description {
     color: rgb(52, 61, 65);
-    position: absolute;
-    top: 43%;
-    left: 52%;
     font-size: 2rem;
-    z-index: 1;
+    margin: 0;
+    line-height: 1.4;
   }
 
   #background-video {
@@ -109,7 +123,51 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: blur(40px) hue-rotate(30deg);
+    filter: blur(40px) hue-rotate(5deg);
     z-index: 0;
-    scrollbar-width: 0;
+    overflow: hidden;
   }
+
+  @media screen and (max-width: 480px) {
+    .title {
+      font-size: 3rem;
+      top: auto;
+    }
+  
+    .piece-description {
+      font-size: 1.5rem;
+      top: auto;
+      left: auto;
+    }
+
+    .piece {
+      width: 95vw;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+/* Small screens: remove left margin (banner may convert to top nav elsewhere) and stack content */
+@media screen and (max-width: 1000px) {
+  .piece-details {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 0;
+    padding-top: 9rem;
+    min-height: calc(100vh - 56px);
+  }
+
+  .banner {
+    width: 12%;
+  }
+
+  .home a, .contact a, .work a{
+    font-size: 2rem;
+    margin-top: 8.5rem;
+    margin-bottom: 12rem;
+  }
+
+  .title { font-size: 3rem; text-align: center; }
+  .piece-description { font-size: 1.5rem; text-align: center; }
+}
