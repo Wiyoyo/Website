@@ -28,6 +28,8 @@
   
   <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="styles.css"></noscript>
+  <!-- Dynamic animated favicon: script will populate this link -->
+  <link id="dynamic-favicon" rel="icon" href="">
 </head>
 <body>
   <div class="page-container">
@@ -356,9 +358,9 @@
       <div class="about-me" style="text-transform: uppercase;">Hi! I'm Willem, a passionate 3D animator and multidisciplinary designer
         I create a variety of 3D animations, concept ideas, and design work. <br> <br> I have worked with 
         multiple clients to create animations and concept designs for brand and client promotion. Additionally, I have 
-        experience with designing and creating multiple websites for both personal and client purposes. <br> <br> I am extremely 
+        experience with designing and creating multiple websites for both client and personal purposes (like this one!). <br> <br> I am extremely 
         passionate about creating awareness through design and really love bringing characters and emotion to life 
-        through my work. I always enjoy learning new techniques!</div>
+        through my work.</div>
       </div>
 
       <div class="contact-me">
@@ -366,7 +368,7 @@
           <div class="contact-card">
             <div class="card-header">
               <h3>Get in touch</h3>
-              <p>Have a project, a question, or want to collaborate? Send a message and I’ll respond soon.</p>
+              <p>Have a project, a question, or want to collaborate? Send a message and I’ll get back soon!</p>
             </div>
 
             <div class="contact-fields">
@@ -407,7 +409,7 @@
   <footer class="animated-footer" aria-label="Site footer">
     <div class="footer-content">
       <div class="footer-left">
-        <h4>Let's make something</h4>
+        <h4>Let's create something</h4>
         <p>Available for freelance and collaboration — say hi.</p>
       </div>
 
@@ -434,6 +436,7 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
   <script defer src="script.js"></script>
+  <script defer src="favicon.js"></script>
   <!-- Optimized interactivity script with better performance -->
   <script>
     // Optimize mouse tracking with throttling
