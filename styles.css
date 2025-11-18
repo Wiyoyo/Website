@@ -1626,3 +1626,15 @@ body {
   .about-me { width: 94%; padding: 1.25rem; border-radius: 12px; font-size: 1rem; }
   .contact-container { min-height: auto; padding: 2rem 1rem; }
 }
+
+/* Ensure contact form inputs receive touch events on mobile and sit above any overlapping layers */
+#contact-form input,
+#contact-form textarea,
+#contact-form button {
+  position: relative;
+  z-index: 2000;
+  pointer-events: auto;
+  touch-action: auto;
+  -webkit-user-select: text;
+  -webkit-touch-callout: default;
+}
